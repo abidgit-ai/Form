@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-4">
+  <h1 class="text-xl mb-2">View Form</h1>
+  <div id="form-container"></div>
+  <button id="submit" class="bg-blue-500 text-white px-2 py-1 mt-2">Submit</button>
+  <script src="/static/js/view.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    if (id) loadForm(id);
+  </script>
+</body>
+</html>
